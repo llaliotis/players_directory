@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Basketball Players Directory</h1>
+        <h1>ESKA(NA) Player Directory</h1>
         <div className="buttons-container">
           {showAddForm ? (
             <button className="back-button" onClick={handleBackClick}>
