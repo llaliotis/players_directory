@@ -1,7 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
-
 import React, { useState } from 'react';
+import './App.css'; // Import your custom CSS file
 
 function App() {
   const [showAddForm, setShowAddForm] = useState(false);
@@ -15,14 +14,20 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <header>
         <h1>Basketball Players Directory</h1>
-        {showAddForm ? (
-          <button onClick={handleBackClick}>Back</button>
-        ) : (
-          <button onClick={handleAddPlayersClick}>Add Players</button>
-        )}
+        <div className="buttons-container">
+          {showAddForm ? (
+            <button className="back-button" onClick={handleBackClick}>
+              Back
+            </button>
+          ) : (
+            <button className="add-players-button" onClick={handleAddPlayersClick}>
+              Add Players
+            </button>
+          )}
+        </div>
       </header>
       <main>
         {showAddForm ? (

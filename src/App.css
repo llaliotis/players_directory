@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* ChatGPT generated App.css */
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background color for the header */
+  padding: 10px 20px;
+}
+
+.add-players-button,
+.back-button {
+  background-color: blue; /* Blue color for the buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-players-button:hover,
+.back-button:hover {
+  background-color: darkblue; /* Darker shade when hovered */
+}
+
+main {
+  margin-top: 20px;
+}
