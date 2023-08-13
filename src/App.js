@@ -16,8 +16,12 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>ESKA(NA) Players Directory</h1>
-        <div className="buttons-container">
+      <div className="title-container">
+          <h1>🏀 ESKA(NA) Players Directory</h1>
+          <p className="title-description">Welcome to the world's first local basketball players directory! Click on each player to view details. If you want to add a player in the database, use the Add Player button on the top right. If you have any questions, reach me out at llaliotis@gmail.com</p>
+        </div>
+      </header>
+      <div className="buttons-container">
           {showAddForm ? (
             <button className="back-button" onClick={handleBackClick}>
               Back
@@ -28,7 +32,6 @@ function App() {
             </button>
           )}
         </div>
-      </header>
       <main>
         {showAddForm ? (
           <iframe
@@ -48,6 +51,13 @@ function App() {
           </div>
         )}
       </main>
+      <footer>
+        <div className="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </footer>
     </div>
   );
 }

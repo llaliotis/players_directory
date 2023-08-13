@@ -40,21 +40,27 @@
 /* ChatGPT generated App.css */
 
 .app-container {
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  position: relative;
+  min-height: 100vh;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0; /* Light background color for the header */
+  background-color: #ffffff; /* Light background color for the header */
   padding: 10px 20px;
+}
+
+.buttons-container {
+  text-align: right;
+  margin-top: 10px; /* Adjust the margin as needed */
 }
 
 .add-players-button,
 .back-button {
-  background-color: blue; /* Blue color for the buttons */
+  background-color: rgba(128, 52, 236); /* Blue color for the buttons */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -72,4 +78,40 @@ header {
 
 main {
   margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-description {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #007bff;
 }
