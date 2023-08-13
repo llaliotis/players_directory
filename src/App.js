@@ -1,9 +1,15 @@
-import logo from './logo.svg';
+// App.js
+
 import React, { useState } from 'react';
-import './App.css'; // Import your custom CSS file
+import './App.css';
+import ContactPopup from './ContactPopup';
+
+
 
 function App() {
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showContactPopup, setShowContactPopup] = useState(false);
+  
 
   const handleAddPlayersClick = () => {
     setShowAddForm(true);
@@ -13,25 +19,35 @@ function App() {
     setShowAddForm(false);
   };
 
+  const handleContactClick = () => {
+    setShowContactPopup(true);
+  };
+
+  const handleCloseContactPopup = () => {
+    setShowContactPopup(false);
+  };
+
+  
+
   return (
     <div className="app-container">
       <header>
-      <div className="title-container">
-          <h1>🏀 ESKA(NA) Players Directory</h1>
-          <p className="title-description">Welcome to the world's first local basketball players directory! Click on each player to view details. If you want to add a player in the database, use the Add Player button on the top right. If you have any questions, reach me out at llaliotis@gmail.com</p>
+        <div className="title-container">
+          <h1>🏀 ESKA(NA) Men's Basketball Directory 🏀</h1>
+          <p className="title-description">Welcome to the world's first local basketball players directory! <p>Click on each player to view details.</p> If you want to add a player in the database, use the Add Player button on the top right. <p>If you have any questions, click the Contact button at the bottom of the page.</p></p>
         </div>
       </header>
       <div className="buttons-container">
-          {showAddForm ? (
-            <button className="back-button" onClick={handleBackClick}>
-              Back
-            </button>
-          ) : (
-            <button className="add-players-button" onClick={handleAddPlayersClick}>
-              Add Players
-            </button>
-          )}
-        </div>
+        {showAddForm ? (
+          <button className="back-button" onClick={handleBackClick}>
+            Back to Players
+          </button>
+        ) : (
+          <button className="add-players-button" onClick={handleAddPlayersClick}>
+            Add Players
+          </button>
+        )}
+      </div>
       <main>
         {showAddForm ? (
           <iframe
@@ -53,12 +69,13 @@ function App() {
       </main>
       <footer>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy Policy</a> 
           <a href="#">Terms of Use</a>
-          <a href="#">Contact Us</a>
+          <a href="#" onClick={handleContactClick}>Contact</a> {/* Open the popup on click */}
         </div>
       </footer>
-    </div>
+      {showContactPopup && <ContactPopup onClose={handleCloseContactPopup} />} {/* Render the popup when showContactPopup is true */}
+      </div>
   );
 }
 
