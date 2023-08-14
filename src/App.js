@@ -10,11 +10,13 @@ function App() {
   const handleAddPlayersClick = () => {
     setShowAddForm(true);
     setShowTeamForm(false);
+    setShowContactPopup(false);
   };
 
   const handleAddEditTeamClick = () => {
     setShowTeamForm(true);
     setShowAddForm(false);
+    setShowContactPopup(false);
   };
 
   const handleBackClick = () => {
@@ -38,10 +40,15 @@ function App() {
           <p className="title-description">
             Welcome to the world's first local basketball players directory!
             <p>Click on each player to view details.</p> If you want to add a player in the database,
-            use the Add Player button on the top right.
-            <p>If you have any questions, click the Contact button at the bottom of the page.</p>
+            click the "Add Player" button on the right.
+            <p>If you want to add or edit a team, click on the "Add/edit team" button on the right.</p>
+            <p>If you have any questions, click the "Contact" button at the bottom of the page.</p>
           </p>
         </div>
+        {/* New "Contact" button in the header */}
+        <button className="contact-button" onClick={handleContactClick}>
+          Contact
+        </button>
       </header>
       <div className="buttons-container">
         {showAddForm || showTeamForm ? (
@@ -89,9 +96,6 @@ function App() {
         <div className="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
-          <a href="#" onClick={handleContactClick}>
-            Contact
-          </a>
         </div>
       </footer>
       {showContactPopup && <ContactPopup onClose={handleCloseContactPopup} />}
