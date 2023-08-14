@@ -38,30 +38,30 @@ function App() {
         <div className="title-container">
           <h1>🏀 ESKA(NA) Men's Basketball Directory 🏀</h1>
           <p className="title-description">
-            Welcome to the world's first local basketball players directory!
-            <p>Click on each player to view details.</p> If you want to add a player in the database,
+          📦 Welcome to the world's first local basketball players directory!
+            <p>🔍 Click on each player to view details.</p>⛹️‍♂️ If you want to add a player in the database,
             click the "Add Player" button on the right.
-            <p>If you want to add or edit a team, click on the "Add/edit team" button on the right.</p>
-            <p>If you have any questions, click the "Contact" button at the bottom of the page.</p>
+            <p>🏀 If you want to add or edit a team, click on the "Add/edit team" button on the right.</p>
+            <p>❓ If you have any questions, click the "Contact" button on the top right.</p>
           </p>
         </div>
         {/* New "Contact" button in the header */}
         <button className="contact-button" onClick={handleContactClick}>
-          Contact
+        📩 Contact
         </button>
       </header>
       <div className="buttons-container">
         {showAddForm || showTeamForm ? (
           <button className="back-button" onClick={handleBackClick}>
-            Back
+           ⬅️ Back
           </button>
         ) : (
           <>
             <button className="add-players-button" onClick={handleAddPlayersClick}>
-              Add Players
+            ⛹️‍♂️ Add Players
             </button>
             <button className="add-players-button" onClick={handleAddEditTeamClick}>
-              Add/Edit Team
+            🏀 Add/Edit Team
             </button>
           </>
         )}

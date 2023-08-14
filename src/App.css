@@ -60,7 +60,7 @@ header {
 
 .add-players-button,
 .back-button {
-  background-color: rgba(128, 52, 236); /* purple color for the buttons */
+  background-color: rgba(128, 52, 236); /* Purple color for the buttons */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -154,7 +154,7 @@ footer {
   top: 30px; /* Adjust the top position as needed */
   right: 20px; /* Adjust the right position as needed */
   padding: 10px 20px;
-  background-color: rgba(128, 52, 236);
+  background-color: rgba(128, 52, 236); /* Purple color for the buttons */
   color: #fff;
   border: none;
   border-radius: 5px;
