@@ -1,6 +1,6 @@
 # 🏀 Welcome to the world's first local basketball players directory!
 
-Check out the the directory here: https://llaliotis.github.io/players_directory/
+Check out the the directory here: https://basketballdatabase.xyz/
 
 📦 Welcome to the world's first local basketball players directory!
 🔍 Click on each player to view details.
