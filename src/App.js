@@ -36,7 +36,7 @@ function App() {
     <div className="app-container">
       <header>
         <div className="title-container">
-          <h1>🏀 ESKA(NA) Men's Basketball Directory 🏀</h1>
+          <h1>🏀 ESKA(NA) Men's Basketball Directory 🏀 (beta)</h1>
           <p className="title-description">
           📦 Welcome to the world's first local basketball players directory!
             <p>🔍 Click on each player to view details.</p>⛹️‍♂️ If you want to add a player in the database,
